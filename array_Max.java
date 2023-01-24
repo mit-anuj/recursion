@@ -12,19 +12,18 @@ public class array_Max {
         }
         sc.close();
 
-        int max=arrayMax(arr,n-1);
+        int max=arrayMax(arr,0);
         System.out.println(max);
     }
 
     public static int arrayMax(int []arr,int idx){
-        static int max=0;
-        if(idx==arr.length){
-            return 
+        if(idx==arr.length){//!base condition
+            return 0;
         }
-        if(max<arr[idx]){
-            max=arr[idx];
-        }
-        arrayMax(arr, idx+1);
-
+        int max=arrayMax(arr, idx+1);//!faith
+        if(max<arr[idx])
+            return arr[idx];
+        else
+            return max;
     }
 }
