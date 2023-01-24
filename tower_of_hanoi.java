@@ -9,6 +9,7 @@ public class tower_of_hanoi{
         int t2d=sc.nextInt();
         int t3d=sc.nextInt();
         toh(n,t1d,t2d,t3d);
+        sc.close();
     }
 
     public static void toh(int n,int t1id, int t2id,int t3id){
