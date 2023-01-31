@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
-
 public class print_keypad_combination {
     public static void main(String[] args) {
         Scanner sc= new Scanner (System.in);
