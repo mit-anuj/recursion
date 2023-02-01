@@ -13,19 +13,18 @@ public class print_maze_path_with_jumps {
     }
     
     public static void printMPWJ(int cr,int cc, int tr,int tc,String ans){
-        if(cc==tc && cr==tr){
+        if(cc==tc && cr==tr){// base case.
             System.out.println(ans);
             return;
         }
-        if(cc>tc || cc>tr)
-            return;
+        
         for(int i=1;i<tr || i<tc;i++){
             if(cc<tc)
-                printMPWJ(cr, cc+i, tr, tc, ans+"h"+i);
+                printMPWJ(cr, cc+i, tr, tc, ans+"h"+i);// call for horizontal movement.
             if(cr<tr)
-                printMPWJ(cr+i, cc, tr, tc, ans+"v"+i);
+                printMPWJ(cr+i, cc, tr, tc, ans+"v"+i);// call for vertical movement.
             if(cr<tr && cc<tc)
-                printMPWJ(cr+i, cc+i, tr, tc, ans+"d"+i);
+                printMPWJ(cr+i, cc+i, tr, tc, ans+"d"+i);// call for diagonal movement.
         }
     }
 }
